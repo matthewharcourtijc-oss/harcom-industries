@@ -38,8 +38,8 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .logo img{display:block;width:100%;height:auto}
 .status{background:var(--panel);border-bottom:1px solid var(--line)}
 .status .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
-.status div{padding:18px 16px;border-left:1px solid var(--line)}
-.status div:first-child{border-left:0;padding-left:0}
+.status .wrap>div{padding:18px 16px;border-left:1px solid var(--line)}
+.status .wrap>div:first-child{border-left:0;padding-left:0}
 .status strong{display:block;font:800 1.7rem/1 "Barlow Condensed",Impact,sans-serif;text-transform:uppercase}
 .status span{color:var(--mute);font-size:.92rem}
 section{padding:72px 0}
@@ -88,8 +88,8 @@ footer a{color:#9fd8ff}
 @media (max-width:760px){
 .hero .wrap{grid-template-columns:1fr}
 .logo{order:-1;width:min(100%,240px);justify-self:start}
-.status div{border-left:0;border-top:1px solid var(--line);padding-left:0}
-.status div:first-child{border-top:0}
+.status .wrap>div{border-left:0;border-top:1px solid var(--line);padding-left:0}
+.status .wrap>div:first-child{border-top:0}
 section{padding:56px 0}
 }
 </style>
