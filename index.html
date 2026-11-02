@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harcom Industries | Offline field tools for the UK outdoors</title>
+<meta name="description" content="Harcom Industries builds reliable, offline-first field tools. Rook’s Field Companion is a field manual for UK woodland that works with no signal and no cloud.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f4;--panel:#fbfcfd;--ink:#1b2127;--mute:#54606b;--line:#cdd5dc;--ice:#0a64a0;--hz:#c94a00;--hz-fill:#ff6a13;--on-hz:#14181c;--steel:#232a30;--steel-ink:#e8edf1;--steel-mute:#a5b1bb;--steel-line:#3a444d;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171c20;--panel:#1f262b;--ink:#e8edf1;--mute:#a0acb6;--line:#35404a;--ice:#9fd8ff;--hz:#ff7a2a;--steel:#101417;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171c20;--panel:#1f262b;--ink:#e8edf1;--mute:#a0acb6;--line:#35404a;--ice:#9fd8ff;--hz:#ff7a2a;--steel:#101417;color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Barlow,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",Impact,sans-serif;font-weight:800;line-height:1;margin:0}
+a{color:var(--ice)}
+:focus-visible{outline:3px solid var(--hz-fill);outline-offset:3px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+.stripe{height:12px;background:repeating-linear-gradient(-45deg,var(--hz-fill) 0 16px,#14181c 16px 32px)}
+header.top{position:sticky;top:0;z-index:20;background:var(--steel);color:var(--steel-ink);border-bottom:1px solid var(--steel-line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:58px}
+.brand{font:800 1.4rem/1 "Barlow Condensed",Impact,sans-serif;color:#e8edf1;text-decoration:none;white-space:nowrap}
+.brand i{font-style:normal;color:var(--hz-fill)}
+.links{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none}
+.links::-webkit-scrollbar{display:none}
+.links a{color:var(--steel-mute);text-decoration:none;font-weight:500;font-size:.95rem;white-space:nowrap}
+.links a:hover{color:#fff}
+.hero{background:var(--steel);color:var(--steel-ink);padding:56px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(3rem,9vw,5.8rem);text-transform:uppercase}
+.hero h1 b{color:var(--hz-fill)}
+.hero p{font-size:1.15rem;color:var(--steel-mute);max-width:32em;margin:20px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 24px;border-radius:4px;border:2px solid var(--hz-fill);background:var(--hz-fill);color:var(--on-hz)}
+.btn.alt{background:transparent;color:#e8edf1;border-color:#56626c}
+.logo{background:#fff;border-radius:10px;padding:14px;border:4px solid var(--hz-fill);justify-self:center;width:min(100%,340px)}
+.logo img{display:block;width:100%;height:auto}
+.status{background:var(--panel);border-bottom:1px solid var(--line)}
+.status .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.status div{padding:18px 16px;border-left:1px solid var(--line)}
+.status div:first-child{border-left:0;padding-left:0}
+.status strong{display:block;font:800 1.7rem/1 "Barlow Condensed",Impact,sans-serif;text-transform:uppercase}
+.status span{color:var(--mute);font-size:.92rem}
+section{padding:72px 0}
+section.alt{background:var(--panel);border-block:1px solid var(--line)}
+h2{font-size:clamp(2.2rem,6vw,3.4rem);text-transform:uppercase;margin-bottom:12px}
+.lede{color:var(--mute);max-width:38em;margin:0 0 36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--ice);padding:24px;border-radius:2px}
+section.alt .card{background:var(--bg)}
+.card:nth-child(even){border-top-color:var(--hz-fill)}
+.card h3{font-size:1.6rem;text-transform:uppercase;margin-bottom:8px}
+.card p{margin:0;color:var(--mute)}
+.steps{list-style:none;margin:0;padding:0;max-width:720px}
+.steps li{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.steps li:first-child{border-top:0}
+.steps .n{font:800 2.2rem/1 "Barlow Condensed",Impact,sans-serif;color:var(--hz)}
+.steps h3{font-size:1.5rem;text-transform:uppercase;margin-bottom:4px}
+.steps p{margin:0;color:var(--mute)}
+.road{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.rel{border:1px solid var(--line);background:var(--bg);padding:22px;border-radius:2px}
+.rel code{display:inline-block;font:600 .95rem/1 ui-monospace,Menlo,Consolas,monospace;background:var(--steel);color:#9fd8ff;padding:5px 9px;border-radius:3px;margin-bottom:12px}
+.rel h3{font-size:1.5rem;text-transform:uppercase;margin-bottom:6px}
+.rel p{margin:0;color:var(--mute)}
+details{border-top:1px solid var(--line);padding:4px 0;max-width:760px}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;font-size:1.1rem;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--hz);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{margin:0 0 18px;color:var(--mute)}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.person{border-left:6px solid var(--hz-fill);padding:4px 0 4px 18px}
+.person h3{font-size:1.8rem;text-transform:uppercase}
+.person .role{color:var(--ice);font-weight:600;margin:2px 0 8px}
+.person p{margin:0;color:var(--mute)}
+.contact{background:var(--steel);color:var(--steel-ink)}
+.contact h2{color:#e8edf1}
+.contact .lede{color:var(--steel-mute)}
+.legal h3{font-size:1.4rem;text-transform:uppercase;margin:26px 0 6px}
+.legal p{max-width:44em;margin:0;color:var(--mute)}
+.legal .date{font-size:.9rem;margin-bottom:6px}
+footer{background:var(--steel);color:var(--steel-mute);border-top:1px solid var(--steel-line);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;padding-bottom:28px}
+footer button{background:none;border:1px solid var(--steel-line);color:var(--steel-mute);border-radius:4px;padding:6px 12px;font:inherit;cursor:pointer}
+footer a{color:#9fd8ff}
+@media (max-width:760px){
+.hero .wrap{grid-template-columns:1fr}
+.logo{order:-1;width:min(100%,240px);justify-self:start}
+.status div{border-left:0;border-top:1px solid var(--line);padding-left:0}
+.status div:first-child{border-top:0}
+section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+<div class="wrap">
+<a class="brand" href="#top">HARCOM <i>INDUSTRIES</i></a>
+<nav class="links" aria-label="Main">
+<a href="#product">Product</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#releases">Releases</a><a href="#faq">FAQ</a><a href="#about">About</a><a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main id="top">
+<div class="hero">
+<div class="wrap">
+<div>
+<h1>Works where the <b>signal</b> doesn’t.</h1>
+<p>Harcom Industries builds reliable, offline-first field tools. Our first product, Rook’s Field Companion, is a field manual for UK woodland that runs with no cloud and no connection.</p>
+<div class="btns">
+<a class="btn" href="#product">Meet Rook’s Field Companion</a>
+<a class="btn alt" href="https://github.com/matthewharcourtijc-oss/rooks-field-companion" rel="noopener">View on GitHub</a>
+</div>
+</div>
+<div class="logo"><img src="logo.png" alt="Harcom Industries logo: a horned Viking helmet with an orange beard"></div>
+</div>
+</div>
+<div class="stripe" aria-hidden="true"></div>
+
+<div class="status">
+<div class="wrap">
+<div><strong>No cloud</strong><span>Your data stays on your device</span></div>
+<div><strong>No signal needed</strong><span>Offline-first by design</span></div>
+<div><strong>No account</strong><span>Open it and start working</span></div>
+<div><strong>Made in Stockport</strong><span>Built for UK woodland</span></div>
+</div>
+</div>
+
+<section id="product">
+<div class="wrap">
+<h2>Rook’s Field Companion</h2>
+<p class="lede">A field manual that does not depend on anything else. When you are deep in the woods and the phone shows no bars, it opens, it works and it keeps your records safe.</p>
+<div class="grid">
+<div class="card"><h3>Built for UK woodland</h3><p>Reference material and tools aimed at the conditions you actually meet on British ground.</p></div>
+<div class="card"><h3>Reliability first</h3><p>Our one non-negotiable rule. Every feature has to work with no connection before it ships.</p></div>
+<div class="card"><h3>Yours alone</h3><p>Nothing is sent to a server. What you write on the device stays on the device.</p></div>
+</div>
+</div>
+</section>
+
+<section id="features" class="alt">
+<div class="wrap">
+<h2>Everything in the kit</h2>
+<p class="lede">Simple tools that earn their place in the pack.</p>
+<div class="grid">
+<div class="card"><h3>Tasks</h3><p>Keep a running list of what needs doing, and tick it off as the day goes on.</p></div>
+<div class="card"><h3>Notes</h3><p>Write down what you see, find and decide, without needing a connection to save it.</p></div>
+<div class="card"><h3>Mission log</h3><p>A running record of the day, in order, so you can look back on what happened and when.</p></div>
+<div class="card"><h3>Offline storage</h3><p>Everything is saved locally on your device, so there is nothing to sync and nothing to lose to a dropped signal.</p></div>
+</div>
+</div>
+</section>
+
+<section id="how">
+<div class="wrap">
+<h2>How it works</h2>
+<p class="lede">Three steps, and none of them need a network.</p>
+<ol class="steps">
+<li><span class="n">1</span><div><h3>Open it</h3><p>Launch the app. There is no sign-up, no login and no loading screen waiting on a server.</p></div></li>
+<li><span class="n">2</span><div><h3>Use it in the field</h3><p>Add tasks, write notes and log what happens as it happens.</p></div></li>
+<li><span class="n">3</span><div><h3>Keep it with you</h3><p>Your information is stored on your own device, ready next time you head out.</p></div></li>
+</ol>
+</div>
+</section>
+
+<section id="releases" class="alt">
+<div class="wrap">
+<h2>Releases</h2>
+<p class="lede">We ship carefully. A stable version stays untouched while the next one is built.</p>
+<div class="road">
+<div class="rel"><code>v0.1-safe</code><h3>Stable</h3><p>The dependable baseline. Kept safe and unchanged so there is always a version that works.</p></div>
+<div class="rel"><code>v0.2-dev</code><h3>In development</h3><p>Where new features are built and tested before they reach everyone. Follow progress on GitHub.</p></div>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="wrap">
+<h2>Questions</h2>
+<p class="lede">The short answers.</p>
+<details><summary>Does it need an internet connection?</summary><p>No. It is designed to work offline from the start. A connection is never required to use it.</p></details>
+<details><summary>Where is my data kept?</summary><p>On your own device. We do not run a cloud service for it, so there is no account and nothing is uploaded.</p></details>
+<details><summary>Is it only for woodland?</summary><p>It is built around UK woodland, but the tools for tasks, notes and logging are useful anywhere you work without signal.</p></details>
+<details><summary>How do I follow updates?</summary><p>Watch the project on GitHub. Stable and in-development versions are kept on separate branches.</p></details>
+</div>
+</section>
+
+<section id="about" class="alt">
+<div class="wrap">
+<h2>About Harcom Industries</h2>
+<p class="lede">A small off-grid outfit from Stockport, with a simple belief: tools for the field should be dependable first and clever second.</p>
+<div class="people">
+<div class="person"><h3>Viking</h3><p class="role">Founder and CEO</p><p>Sets the direction and the standards, and owns the one rule that matters: reliability first.</p></div>
+<div class="person"><h3>Rook</h3><p class="role">Field Commander</p><p>Second-in-command and the name on the front of the app. Keeps the product honest about what works outdoors.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="wrap">
+<h2>Get in touch</h2>
+<p class="lede">Questions, ideas or bug reports are welcome. The best place to reach us right now is the project on GitHub.</p>
+<div class="btns"><a class="btn" href="https://github.com/matthewharcourtijc-oss/rooks-field-companion" rel="noopener">Open the project</a></div>
+</div>
+</section>
+
+<section id="privacy" class="legal">
+<div class="wrap">
+<h2>Privacy</h2>
+<p class="date">Last updated 2 November 2026</p>
+<h3>The app</h3>
+<p>Rook’s Field Companion is offline-first. The tasks, notes and log entries you create are stored on your own device. We do not run a cloud service for them, we do not require an account and we do not receive your data.</p>
+<h3>This website</h3>
+<p>This site does not use cookies, advertising or analytics. It loads its typefaces from Google Fonts, so your browser contacts Google’s servers when the page opens, and Google may receive your IP address as part of that request. Your light or dark theme choice is not stored.</p>
+<h3>Links to other sites</h3>
+<p>Our buttons link to the project on GitHub. GitHub has its own privacy policy, which applies once you leave this site.</p>
+<h3>Questions</h3>
+<p>If you have a question about privacy, raise it through the project on GitHub and we will answer there.</p>
+</div>
+</section>
+</main>
+
+<div class="stripe" aria-hidden="true"></div>
+<footer>
+<div class="wrap">
+<span>© 2026 Harcom Industries. Stockport, UK. <a href="#privacy">Privacy</a></span>
+<button id="themeBtn" type="button">Switch theme</button>
+</div>
+</footer>
+
+<script>
+(function(){
+var root=document.documentElement;
+document.getElementById('themeBtn').addEventListener('click',function(){
+var d=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+root.setAttribute('data-theme',d?'light':'dark');
+});
+})();
+</script>
+</body>
+</html>
