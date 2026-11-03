@@ -32,7 +32,9 @@ Use the supplied official HARCOM Industries logo: the black Viking-head silhouet
 - **Rook’s Field Companion:** rugged field terminal; same logo and palette, optimised for outdoor reading and one-handed use.
 - **Viking AI Council:** command-and-analysis interface; shared identity, with distinct voices and clear evidence/status reporting.
 - **OFFGRID:** future offline companion; shared identity, reliability-first, with no implementation until its project is authorised.
-- **HARCOM Industries website:** public corporate identity and product directory.
+- **Void Writers:** proposed four-agent software engineering system; human authority, isolated tools and independent verification are mandatory.
+- **Project Zeus:** long-term original AI model research programme; do not imply a model or training system exists before it is built.
+- **HARCOM Industries website:** public corporate identity and product directory; distinguish live products from plans and research.
 
 ## Release and safety rules
 
@@ -45,8 +47,8 @@ Use the supplied official HARCOM Industries logo: the black Viking-head silhouet
 
 ## Rollout status — 3 November 2026
 
-- Official website already displays the supplied HARCOM Industries logo.
-- Field Companion official-logo change is being validated for deployment.
-- Vault official-mark change is in an isolated pull request and awaiting Android CI/emulator checks.
-- Viking AI Council remains frozen for its scheduled baseline review on 4 November.
-- Paradox Vault source has not been verified; do not alter it until the actual source is recovered and inspected.
+- Official website displays the supplied HARCOM Industries logo; product portfolio and roadmap refresh is in review.
+- Field Companion official logo and launcher icon changes are merged. Android install flow is merged; a separate service-worker cache refresh remains under review. Consumer-facing release remains v0.9.9.
+- HARCOM Vault v0.7.4 brand-update PR has passed source guards, unit tests, lint, APK assembly and API 35 emulator instrumentation. Physical Samsung update validation and merge remain outstanding. The app is not independently audited or security-certified.
+- Viking AI Council v1.1 is deployed. Its 4 November 2026 09:00 UTC review run is scheduled; do not modify the engine before its report and health JSON are inspected.
+- Void Writers is in concept/design only. OFFGRID is a future programme. Project Zeus is a long-term AI R&D ambition; none is represented as a shipped product.
