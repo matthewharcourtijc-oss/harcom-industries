@@ -1,26 +1,37 @@
 # HARCOM Industries
 
-Official public website for HARCOM Industries.
+Official public website and product directory for HARCOM Industries.
 
-**Live website:** https://matthewharcourtijc-oss.github.io/harcom-industries/  
-**Current product:** Rook's Field Companion v0.9.9  
-**Live app:** https://matthewharcourtijc-oss.github.io/rooks-field-companion/  
-**App source:** https://github.com/matthewharcourtijc-oss/rooks-field-companion
+**Live website:** https://matthewharcourtijc-oss.github.io/harcom-industries/
 
-## Website
+## Portfolio
 
-- Single static HTML page.
-- GitHub Pages hosting.
-- Local system-font stack; no third-party hosted font dependency.
+| Product / programme | Status | Description |
+|---|---|---|
+| Rook's Field Companion | Live — consumer release v0.9.9 | Offline-first Android-friendly field companion: tasks, notes, mission log, UK countryside field library and local backups. Browser storage is local, not encrypted. |
+| HARCOM Vault | Working Android build | Native offline encrypted storage with recovery archives and Android Keystore integration. The v0.7.4 branding update passed CI/emulator checks; physical-device update validation and merge remain outstanding. No independent security audit or certification is claimed. |
+| Viking AI Council | Active development — v1.1 | Multi-perspective AI debate prototype with REAL/FALLBACK health reporting and human approval. The engine is frozen pending the 4 November 2026 review. |
+| Void Writers | In design | Proposed four-agent engineering team: Architect, Writer, Checker and Fixer, with restricted tools and human-controlled releases. |
+| OFFGRID | Future programme | Planned Android-first offline companion exploring local AI, speech, memory and optional connected operation. Not started. |
+| Project Zeus | Long-term R&D ambition | Research goal to develop an original HARCOM AI model, including architecture, training, evaluation and inference. Not started; no trained model exists. |
+
+## Website implementation
+
+- Single static HTML page hosted on GitHub Pages.
+- Dark-first graphite / gunmetal visual system with icy-blue and HARCOM-orange accents.
+- Local system fonts; no third-party hosted font dependency.
 - Brand artwork is stored in this repository.
 - No analytics or tracking scripts are intentionally included.
 
-## Product
+## Release and accuracy rules
 
-Rook's Field Companion is an offline-first field tool for UK countryside and woodland use. The current published app release is v0.9.9. Its app source, release notes, validation workflow, and deployment workflow are maintained in the separate application repository.
+- The website must distinguish live products, working builds, active development, planned projects and long-term research.
+- Do not describe unreleased work as live.
+- Do not describe local browser storage as encrypted or as a secure vault.
+- Do not describe Vault as security-certified or independently audited.
+- A successful CI run is not the same as physical-device validation.
+- Preserve live products while development changes are reviewed separately.
 
-## Release policy
+**Operating standard:** Human authority. Security by design. Reliability first. Evidence before claims.
 
-The website must describe the release that is actually published. Do not label historical v0.1/v0.2 development states as current. Do not describe unreleased work as live.
-
-Reliability first. Survival second. Polish third. AI last.
+© 2026 HARCOM Industries. All rights reserved.
