@@ -2,7 +2,7 @@ name: Nightly HARCOM Industries site validation
 
 on:
   schedule:
-    - cron: '17 5 * * *'
+    - cron: '47 5 * * *'
   workflow_dispatch:
   push:
     branches: ['automation/**']
