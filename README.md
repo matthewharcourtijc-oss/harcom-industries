@@ -9,7 +9,7 @@ Official public website and product directory for HARCOM Industries.
 | Product / programme | Status | Description |
 |---|---|---|
 | Rook's Field Companion | Live — consumer release v0.9.9 | Offline-first Android-friendly field companion: tasks, notes, mission log, UK countryside field library and local backups. Browser storage is local, not encrypted. |
-| HARCOM Vault | Working Android build | Native offline encrypted storage with recovery archives and Android Keystore integration. The current source release is v0.7.3. Its visual refresh and build cleanup passed CI/emulator checks; physical-device update validation, a signed release build and independent security review remain outstanding. No independent security audit or certification is claimed. |
+| HARCOM Vault | Working Android build | Native offline encrypted storage with recovery archives and Android Keystore integration. The current source version is v0.7.4 (versionCode 11); no GitHub release has been published. Its visual refresh and build cleanup passed CI/emulator checks; physical-device update validation, a signed release build and independent security review remain outstanding. No independent security audit or certification is claimed. |
 | Viking AI Council | Active development — v1.1 | Multi-perspective AI debate prototype with REAL/FALLBACK health reporting and human approval. The engine is frozen pending the 4 November 2026 review. |
 | Void Writers | In design | Proposed four-agent engineering team: Architect, Writer, Checker and Fixer, with restricted tools and human-controlled releases. |
 | OFFGRID | Future programme | Planned Android-first offline companion exploring local AI, speech, memory and optional connected operation. Not started. |
