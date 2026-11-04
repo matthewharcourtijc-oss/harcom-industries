@@ -1,0 +1,82 @@
+name: Nightly HARCOM Industries site validation
+
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+  push:
+    branches: ['automation/**']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: harcom-industries-site-validation
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Validate HTML structure, local assets and internal anchors
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlparse
+          import sys
+
+          root = Path(".")
+          page = root / "index.html"
+          if not page.is_file():
+              raise SystemExit("index.html is missing")
+
+          class Audit(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.ids = set()
+                  self.fragments = []
+                  self.local_assets = []
+                  self.title = False
+                  self.h1 = False
+                  self.in_title = False
+                  self.in_h1 = False
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  ident = attrs.get("id")
+                  if ident:
+                      if ident in self.ids:
+                          raise SystemExit(f"Duplicate HTML id: {ident}")
+                      self.ids.add(ident)
+                  if tag == "title": self.in_title = True
+                  if tag == "h1": self.in_h1 = True
+                  href = attrs.get("href", "")
+                  if href.startswith("#") and len(href) > 1:
+                      self.fragments.append(href[1:])
+                  src = attrs.get("src", "")
+                  if src and not urlparse(src).scheme and not src.startswith("//"):
+                      self.local_assets.append(src.split("?", 1)[0])
+              def handle_endtag(self, tag):
+                  if tag == "title": self.in_title = False
+                  if tag == "h1": self.in_h1 = False
+              def handle_data(self, data):
+                  if self.in_title and data.strip(): self.title = True
+                  if self.in_h1 and data.strip(): self.h1 = True
+
+          audit = Audit()
+          audit.feed(page.read_text(encoding="utf-8"))
+          if not audit.title or not audit.h1:
+              raise SystemExit("Page title or primary heading is missing")
+          missing_fragments = sorted(set(audit.fragments) - audit.ids)
+          if missing_fragments:
+              raise SystemExit(f"Broken internal anchors: {missing_fragments}")
+          missing_assets = [src for src in audit.local_assets if not (root / src).is_file()]
+          if missing_assets:
+              raise SystemExit(f"Missing local assets: {missing_assets}")
+          print(f"Site structure passed: {len(audit.ids)} unique IDs, {len(audit.fragments)} internal links, {len(audit.local_assets)} local assets.")
+          PY
