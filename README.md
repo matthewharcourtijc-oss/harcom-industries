@@ -9,8 +9,9 @@ Official public website and product directory for HARCOM Industries.
 | Product / programme | Status | Description |
 |---|---|---|
 | Rook's Field Companion | Live — consumer release v0.9.9 | Offline-first Android-friendly field companion: tasks, notes, mission log, UK countryside field library and local backups. Browser storage is local, not encrypted. |
-| HARCOM Vault | Working Android build | Native offline encrypted storage with recovery archives and Android Keystore integration. The current source version is v0.7.4 (versionCode 11); no GitHub release has been published. Its visual refresh and build cleanup passed CI/emulator checks; physical-device update validation, a signed release build and independent security review remain outstanding. No independent security audit or certification is claimed. |
-| Viking AI Council | Active development — v1.1 | Multi-perspective AI debate prototype with REAL/FALLBACK health reporting and human approval. The engine is frozen pending the 4 November 2026 review. |
+| HARCOM Vault | Preserved reference build | Earlier native Android vault build retained as reference material; separate from Paradox Vault and not the current development target. No independent security audit or certification is claimed. |
+| Paradox Vault | Android foundation in development | New Android-first, local-only encrypted vault. Security foundation and verification are in progress; no installable release is available yet. HARCOM Vault remains untouched. |
+| Viking AI Council | Engine frozen — reliability review | Latest verified run produced REAL Optimist and Sceptic responses, with Pragmatist and Chair falling back. No 4 November scheduled run is recorded; engine changes remain paused pending reliability evidence. |
 | Void Writers | In design | Proposed four-agent engineering team: Architect, Writer, Checker and Fixer, with restricted tools and human-controlled releases. |
 | OFFGRID | Future programme | Planned Android-first offline companion exploring local AI, speech, memory and optional connected operation. Not started. |
 | Project Zeus | Long-term R&D ambition | Research goal to develop an original HARCOM AI model, including architecture, training, evaluation and inference. Not started; no trained model exists. |
