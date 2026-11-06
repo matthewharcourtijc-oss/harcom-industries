@@ -1,0 +1,56 @@
+version: 2.1
+jobs:
+  site-validation:
+    docker:
+      - image: cimg/python:3.11
+    resource_class: small
+    steps:
+      - checkout
+      - run:
+          name: Validate HARCOM Industries website without modifying it
+          command: |
+            python - <<'PY'
+            from html.parser import HTMLParser
+            from pathlib import Path
+            from urllib.parse import urlparse
+            root = Path(".")
+            page = root / "index.html"
+            assert page.is_file(), "index.html is missing"
+            class Audit(HTMLParser):
+                def __init__(self):
+                    super().__init__()
+                    self.ids, self.fragments, self.assets = set(), [], []
+                    self.title = self.h1 = False
+                    self.in_title = self.in_h1 = False
+                def handle_starttag(self, tag, attrs):
+                    attrs = dict(attrs)
+                    ident = attrs.get("id")
+                    if ident:
+                        assert ident not in self.ids, f"Duplicate HTML id: {ident}"
+                        self.ids.add(ident)
+                    if tag == "title": self.in_title = True
+                    if tag == "h1": self.in_h1 = True
+                    href = attrs.get("href", "")
+                    if href.startswith("#") and len(href) > 1: self.fragments.append(href[1:])
+                    src = attrs.get("src", "")
+                    if src and not urlparse(src).scheme and not src.startswith("//"):
+                        self.assets.append(src.split("?", 1)[0])
+                def handle_endtag(self, tag):
+                    if tag == "title": self.in_title = False
+                    if tag == "h1": self.in_h1 = False
+                def handle_data(self, data):
+                    if self.in_title and data.strip(): self.title = True
+                    if self.in_h1 and data.strip(): self.h1 = True
+            audit = Audit()
+            audit.feed(page.read_text(encoding="utf-8"))
+            assert audit.title and audit.h1, "Page title or primary heading is missing"
+            missing = sorted(set(audit.fragments) - audit.ids)
+            assert not missing, f"Broken internal anchors: {missing}"
+            missing_assets = [src for src in audit.assets if not (root / src).is_file()]
+            assert not missing_assets, f"Missing local assets: {missing_assets}"
+            print(f"PASS: {len(audit.ids)} unique IDs, {len(audit.fragments)} anchors, {len(audit.assets)} local assets.")
+            PY
+workflows:
+  industries-site-ci:
+    jobs:
+      - site-validation
