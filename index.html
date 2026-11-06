@@ -3,44 +3,154 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b1015">
+<meta name="theme-color" content="#090d11">
 <meta name="description" content="HARCOM Industries builds practical software, offline-first tools and human-controlled AI systems. Reliability first. Human in command.">
-<title>HARCOM Industries | Human in command</title>
+<title>HARCOM Industries | Built with purpose</title>
 <style>
-:root{color-scheme:dark;--bg:#0b1015;--panel:#141c23;--panel2:#10171d;--ink:#edf2f5;--muted:#aab7c0;--line:#34434e;--orange:#ff7518;--ice:#bcecfa;--green:#8fd3a9}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--ice)}a:focus-visible{outline:3px solid var(--orange);outline-offset:4px}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
-.top{position:sticky;top:0;z-index:5;background:#080d11ed;border-bottom:1px solid #27343d;backdrop-filter:blur(12px)}.bar{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{color:var(--ink);text-decoration:none;font-weight:900;letter-spacing:.05em;font-size:1.2rem}.brand span{color:var(--orange)}nav{display:flex;gap:22px;overflow:auto}nav a{white-space:nowrap;color:var(--muted);text-decoration:none;font-size:.93rem}nav a:hover{color:white}
-.hero{padding:76px 0 68px;background:radial-gradient(ellipse at 82% 18%,#263946 0,transparent 49%),#080d11}.hero-grid{display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:48px}.eyebrow{color:var(--orange);font-weight:850;letter-spacing:.16em;text-transform:uppercase;font-size:.76rem}.hero h1{font-size:clamp(3rem,8vw,5.7rem);line-height:.98;letter-spacing:-.05em;margin:16px 0}.hero h1 em{font-style:normal;color:var(--orange)}.hero p{max-width:660px;color:#bdc8cf;font-size:1.12rem}.mark{background:#fff;border:4px solid var(--orange);border-radius:12px;padding:12px;max-width:285px;justify-self:center;box-shadow:0 20px 60px #0007}.mark img{display:block;width:100%;height:auto}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-block;padding:12px 19px;border-radius:4px;background:var(--orange);color:#101418;text-decoration:none;font-weight:850}.btn.secondary{background:transparent;border:1px solid #64727c;color:var(--ink)}
-.principles{border-block:1px solid var(--line);background:var(--panel);padding:20px 0}.principles .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.principles strong{display:block;text-transform:uppercase;font-size:.98rem}.principles span{color:var(--muted);font-size:.86rem}
-section{padding:68px 0}section.alt{background:var(--panel2);border-block:1px solid #27343d}h2{font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;text-transform:uppercase;margin:0 0 12px;letter-spacing:-.03em}.intro{color:var(--muted);max-width:760px;margin:0 0 32px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{display:flex;flex-direction:column;background:linear-gradient(160deg,#18222a,#121920 70%);border:1px solid var(--line);border-top:3px solid var(--ice);padding:22px;min-width:0;border-radius:3px;transition:transform .18s ease,border-color .18s ease}.card:hover{transform:translateY(-3px);border-color:#657987}.card:nth-child(even){border-top-color:var(--orange)}.card h3{font-size:1.2rem;line-height:1.2;text-transform:uppercase;margin:13px 0 9px}.card p{color:var(--muted);margin:0 0 10px}.card a{display:inline-block;margin-top:auto;padding-top:12px;font-weight:800}.tag{align-self:flex-start;display:inline-block;font-size:.68rem;line-height:1.4;letter-spacing:.08em;font-weight:900;padding:5px 8px;border:1px solid var(--line);color:var(--ice);text-transform:uppercase}.tag.live{color:var(--green);border-color:#477c60}.tag.build{color:var(--orange);border-color:#99501e}.tag.private{color:var(--ice);border-color:#597b8c}.tag.future{color:#b6c0c7}
-.note{border-left:4px solid var(--orange);padding:15px 18px;background:#171e24;color:var(--muted);max-width:900px;margin-top:28px}.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.rule{padding:20px;border:1px solid var(--line);background:var(--panel)}.rule b{color:var(--orange);font-size:.78rem;letter-spacing:.12em}.rule h3{margin:8px 0;text-transform:uppercase}.rule p{color:var(--muted);margin:0}.about{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.person{border-left:4px solid var(--orange);padding-left:18px}.person h3{margin:0;text-transform:uppercase}.person p{margin:4px 0;color:var(--muted)}footer{padding:28px 0;background:#080d11;color:var(--muted);border-top:1px solid #27343d;font-size:.9rem}footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.mark{grid-row:1;justify-self:start;width:185px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.principles .wrap{grid-template-columns:repeat(2,1fr)}.rules{grid-template-columns:1fr}}@media(max-width:520px){.wrap{width:min(100% - 30px,1120px)}.bar{align-items:flex-start;flex-direction:column;padding:14px 0;gap:8px}nav{width:100%;gap:18px}.hero{padding:48px 0}.grid,.about{grid-template-columns:1fr}section{padding:52px 0}.principles .wrap{gap:14px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}.card:hover{transform:none}}
+:root{
+  color-scheme:dark;
+  --bg:#090d11;--surface:#111920;--surface-raised:#17222a;--surface-soft:#0d141a;
+  --ink:#f2f5f6;--muted:#b1bec6;--quiet:#81909a;--line:#35434d;
+  --orange:#ff7518;--orange-bright:#ff9a45;--ice:#bcecfa;--green:#9bd7ad;
+  --max:1160px;--radius:10px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--ice);text-underline-offset:4px}
+a:hover{color:#fff}
+a:focus-visible{outline:3px solid var(--orange-bright);outline-offset:4px;border-radius:3px}
+img{max-width:100%;height:auto}
+.wrap{width:min(var(--max),calc(100% - 44px));margin-inline:auto}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--orange);color:#111;padding:10px 14px;z-index:20}
+.skip:focus{left:12px}
+.top{position:sticky;top:0;z-index:10;background:#090d11ed;border-bottom:1px solid #27343d;backdrop-filter:blur(14px)}
+.bar{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--ink);text-decoration:none;font-weight:950;letter-spacing:.075em;font-size:1.02rem}
+.brand-mark{width:34px;height:34px;object-fit:contain}
+.brand span{color:var(--orange)}
+nav{display:flex;align-items:center;gap:25px}
+nav a{min-height:44px;display:inline-flex;align-items:center;color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:650}
+nav a:hover{color:var(--orange-bright)}
+.hero{position:relative;overflow:hidden;padding:clamp(58px,8vw,108px) 0 82px;background:radial-gradient(ellipse at 78% 36%,#273b48 0,transparent 42%),linear-gradient(115deg,#0b1116 0%,#0a1015 58%,#111b22 100%)}
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.17;background-image:linear-gradient(#91a6b11a 1px,transparent 1px),linear-gradient(90deg,#91a6b11a 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(90deg,transparent,#000 50%,#000)}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);align-items:center;gap:54px}
+.eyebrow{display:flex;align-items:center;gap:11px;color:var(--orange-bright);font-size:.75rem;font-weight:900;letter-spacing:.19em;text-transform:uppercase}
+.eyebrow:before{content:"";width:30px;height:2px;background:var(--orange)}
+.hero h1{max-width:760px;margin:20px 0 18px;font-size:clamp(3.2rem,7.4vw,6.5rem);line-height:.91;letter-spacing:-.065em;font-weight:950;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--orange);text-shadow:0 8px 34px #ff75182b}
+.hero-copy{max-width:620px;color:#c1cbd1;font-size:clamp(1.04rem,1.5vw,1.2rem);line-height:1.75}
+.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border:1px solid var(--orange);border-radius:5px;background:var(--orange);color:#101418;text-decoration:none;font-weight:900;letter-spacing:.015em;transition:transform .18s ease,background .18s ease}
+.btn:hover{background:var(--orange-bright);color:#101418;transform:translateY(-2px)}
+.btn.secondary{background:transparent;border-color:#637783;color:var(--ink)}
+.btn.secondary:hover{border-color:var(--ice);background:#bcecfa12;color:#fff}
+.hero-art{position:relative;display:grid;place-items:center;min-height:380px}
+.hero-art:before{content:"";position:absolute;width:min(92%,390px);aspect-ratio:1;border:1px solid #ff75184a;border-radius:50%;box-shadow:0 0 0 22px #ff75180b,0 0 0 54px #bcecfa08,0 0 75px #ff751817}
+.hero-art img{position:relative;width:min(100%,420px);max-height:450px;object-fit:contain;filter:drop-shadow(0 22px 35px #000b)}
+.hero-caption{position:absolute;bottom:0;right:0;color:#91a3ad;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase}
+.signal{border-block:1px solid var(--line);background:#111920}
+.signal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.signal-item{padding:22px 20px;border-right:1px solid #2b3942}
+.signal-item:first-child{padding-left:0}
+.signal-item:last-child{border-right:0}
+.signal-item strong{display:block;color:var(--ink);font-size:.92rem;text-transform:uppercase;letter-spacing:.055em}
+.signal-item span{display:block;color:var(--muted);font-size:.82rem;line-height:1.45;margin-top:3px}
+section{padding:76px 0}
+section.alt{background:var(--surface-soft);border-block:1px solid #26333c}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
+h2{margin:10px 0 0;font-size:clamp(2rem,4.6vw,3.35rem);line-height:1.02;letter-spacing:-.045em;text-transform:uppercase}
+.intro{max-width:730px;color:var(--muted);margin:14px 0 0;line-height:1.7}
+.portfolio-kicker{color:var(--quiet);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{position:relative;display:flex;flex-direction:column;min-width:0;min-height:276px;padding:23px 22px 20px;border:1px solid var(--line);border-top:3px solid var(--ice);border-radius:7px;background:linear-gradient(155deg,#19242c 0%,#111920 76%);transition:transform .2s ease,border-color .2s ease,background .2s ease}
+.card:nth-child(3n+2){border-top-color:var(--orange)}
+.card:hover{transform:translateY(-4px);border-color:#71838e;background:linear-gradient(155deg,#202e38 0%,#131d24 76%)}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.number{color:#657681;font-size:.75rem;font-weight:850;letter-spacing:.12em}
+.tag{display:inline-flex;align-items:center;gap:7px;max-width:100%;padding:5px 8px;border:1px solid #52616a;border-radius:3px;color:var(--ice);font-size:.66rem;line-height:1.35;letter-spacing:.075em;font-weight:900;text-transform:uppercase}
+.tag:before{content:"";width:6px;height:6px;flex:0 0 6px;border-radius:50%;background:currentColor}
+.tag.live{color:var(--green);border-color:#477c60}
+.tag.build{color:var(--orange-bright);border-color:#99501e}
+.tag.private{color:var(--ice);border-color:#597b8c}
+.tag.future{color:#b6c0c7;border-color:#53616a}
+.card h3{margin:20px 0 10px;font-size:1.18rem;line-height:1.18;letter-spacing:.015em;text-transform:uppercase}
+.card p{margin:0 0 15px;color:var(--muted);font-size:.92rem;line-height:1.62}
+.card a{display:inline-flex;align-items:center;gap:8px;margin-top:auto;padding-top:12px;font-size:.88rem;font-weight:850;text-decoration:none}
+.card a:after{content:"↗";color:var(--orange);font-size:1.1rem}
+.card .no-link{margin-top:auto;padding-top:12px;color:#82929b;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+.note{margin-top:24px;padding:17px 20px;border:1px solid #5e452f;border-left:4px solid var(--orange);border-radius:4px;background:#171c20;color:var(--muted);font-size:.9rem}
+.note strong{color:var(--ink)}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.rule{padding:24px;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.rule b{color:var(--orange-bright);font-size:.72rem;letter-spacing:.16em}
+.rule h3{margin:12px 0 8px;font-size:1.08rem;text-transform:uppercase}
+.rule p{margin:0;color:var(--muted);font-size:.92rem}
+.about{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}
+.person{padding:23px;border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:5px;background:var(--surface)}
+.person h3{margin:0;text-transform:uppercase;letter-spacing:.04em}
+.person p{margin:4px 0 0;color:var(--muted)}
+.contact-band{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:28px;border:1px solid #4a5962;border-radius:7px;background:linear-gradient(110deg,#19252d,#111920)}
+.contact-band p{margin:7px 0 0;color:var(--muted)}
+footer{padding:26px 0;background:#070b0e;border-top:1px solid #27343d;color:var(--muted);font-size:.82rem}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.foot strong{color:var(--ink);letter-spacing:.06em}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr .72fr;gap:22px}.hero-art{min-height:300px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card{min-height:250px}.signal-item{padding-inline:14px}}
+@media(max-width:650px){.wrap{width:min(var(--max),calc(100% - 32px))}.bar{min-height:66px;gap:12px}.brand{font-size:.9rem}.brand-mark{width:30px;height:30px}nav{gap:12px}nav a{font-size:.8rem}.hero{padding:48px 0 52px}.hero-grid{grid-template-columns:1fr;gap:20px}.hero-art{grid-row:1;min-height:230px;justify-self:center;width:min(100%,280px)}.hero-art:before{width:80%}.hero-art img{max-height:255px;width:230px}.hero-caption{bottom:-4px;right:0;font-size:.6rem}.hero h1{font-size:clamp(3rem,13vw,4.5rem);margin-top:15px}.hero-copy{font-size:1rem}.signal-grid{grid-template-columns:repeat(2,1fr)}.signal-item{padding:16px 12px;border-bottom:1px solid #2b3942}.signal-item:nth-child(2){border-right:0}.signal-item:nth-child(3){padding-left:0;border-bottom:0}.signal-item:nth-child(4){border-bottom:0}section{padding:55px 0}.section-head{display:block}.portfolio-kicker{display:block;margin-top:14px}.grid,.rules,.about{grid-template-columns:1fr}.card{min-height:0;padding:20px}.contact-band{align-items:flex-start;flex-direction:column;padding:22px}}
+@media(max-width:380px){nav{gap:9px}nav a{font-size:.75rem}.brand{font-size:.82rem}.signal-item strong{font-size:.82rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.card:hover,.btn:hover{transform:none}}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap bar"><a class="brand" href="#top">HARCOM <span>INDUSTRIES</span></a><nav aria-label="Main navigation"><a href="#portfolio">Portfolio</a><a href="#principles">Principles</a><a href="#about">About</a></nav></div></header>
-<main id="top">
-<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Independent technology · United Kingdom</div><h1>Built with <em>purpose.</em><br>Human in command.</h1><p>Practical software, offline-first tools and human-controlled AI systems. Built carefully, improved honestly and kept under human authority.</p><div class="actions"><a class="btn" href="#portfolio">Explore the portfolio</a><a class="btn secondary" href="https://matthewharcourtijc-oss.github.io/rooks-field-companion/">Open Field Companion</a></div></div><div class="mark"><img src="Meta_AI_harcom_industries_spiced_cutout_20261026_191056.png" alt="HARCOM Industries Viking helmet and orange beard emblem"></div></div></section>
-<div class="principles" id="principles"><div class="wrap"><div><strong>Human-led</strong><span>People approve consequential changes</span></div><div><strong>Security-minded</strong><span>Least privilege and careful review</span></div><div><strong>Offline-first</strong><span>Local operation where it matters</span></div><div><strong>Evidence-led</strong><span>Claims match what is verified</span></div></div></div>
-<section class="alt" id="portfolio"><div class="wrap"><div class="eyebrow">The workbench</div><h2>HARCOM portfolio</h2><p class="intro">A clear view of the products, engineering systems and research programmes. Live releases are separated from development, private work and future ideas. No project is described as finished when it is not.</p>
-<div class="grid">
-<article class="card"><span class="tag live">Live · v0.9.9</span><h3>Rook’s Field Companion</h3><p>An offline-first field companion with tasks, notes, mission logs, UK countryside reference material and local backups. The public release is v0.9.9. Browser data is stored locally and is not encrypted; backups and recovery improvements remain central to ongoing engineering.</p><a href="https://matthewharcourtijc-oss.github.io/rooks-field-companion/">Open live app ↗</a></article>
-<article class="card"><span class="tag build">Android development · v0.7.4</span><h3>HARCOM Vault</h3><p>Private native Android encrypted storage using Android Keystore integration and recovery archives. The repository contains development source, not a finished public release. Build verification, physical-device validation, signed release work and independent security review remain outstanding. No certification is claimed.</p></article>
-<article class="card"><span class="tag build">Source recovery required</span><h3>Paradox Vault</h3><p>A separate vault programme. Its original source archive has not yet been recovered into the repository, so the project is not currently buildable and no installable application exists. Source recovery and integrity review come before implementation.</p></article>
-<article class="card"><span class="tag build">Engine frozen · review pending</span><h3>Viking AI Council</h3><p>A multi-perspective AI council with distinct Optimist, Sceptic and Pragmatist voices, a Chair, REAL/FALLBACK health reporting and human approval. The v1 foundation and later chair-analysis work are preserved. The engine remains parked while run repeatability and fallback behaviour are reviewed; human approval remains the final gate.</p></article>
-<article class="card"><span class="tag private">Private · draft / under review</span><h3>HARCOM Engineering Control Centre</h3><p>A private engineering oversight dashboard for approved HARCOM projects. Its direction is governed automation: read-only monitoring, competing analysis, approval requests, controlled actions and independent evidence. It is not a public service; production changes and releases remain under Viking’s authority.</p></article>
-<article class="card"><span class="tag build">Discovery &amp; architecture</span><h3>Rook Forge</h3><p>The foundation for Rook Standalone 2.0, an independent Android companion targeting the Samsung Galaxy S22. The design priorities are offline-first operation, local user-controlled memory, voice and clear permission boundaries. It remains in discovery and architecture; no finished app or APK is claimed.</p></article>
-<article class="card"><span class="tag">In design</span><h3>Void Writers</h3><p>A proposed four-agent engineering workflow: Architect, Writer, Checker and Fixer. The model centres on separate responsibilities, restricted tools, independent checking and human-controlled releases. It remains a design programme.</p></article>
-<article class="card"><span class="tag future">Future programme</span><h3>OFFGRID</h3><p>A longer-term offline Rook companion concept exploring local AI, speech, persistent memory and optional connected operation. Planned as a future programme after the current foundations are stable; not yet in active build.</p></article>
-<article class="card"><span class="tag future">Long-term research</span><h3>Project Zeus</h3><p>HARCOM’s long-range research ambition for an original AI model, including architecture, training, evaluation and inference. This is a research goal, not an existing trained model.</p></article>
-</div>
-<div class="note"><strong>Our status promise:</strong> “Live” means there is a usable release. “Development” means work is in progress and may not be ready for general use. “Private” means internal work, not a public product. “Future” means an idea or programme that has not started building.</div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="#top" aria-label="HARCOM Industries home"><img class="brand-mark" src="assets/harcom-viking-emblem.svg" alt=""><span>HARCOM <span>INDUSTRIES</span></span></a>
+  <nav aria-label="Main navigation"><a href="#portfolio">Portfolio</a><a href="#principles">Principles</a><a href="#about">About</a></nav>
+</div></header>
+<main id="main">
+<section class="hero" id="top"><div class="wrap hero-grid">
+  <div>
+    <div class="eyebrow">Independent technology · United Kingdom</div>
+    <h1>Built with <em>purpose.</em><br>Human in command.</h1>
+    <p class="hero-copy">Practical software, offline-first tools and human-controlled AI systems. Built carefully, improved honestly and kept under human authority.</p>
+    <div class="actions"><a class="btn" href="#portfolio">Explore the portfolio</a><a class="btn secondary" href="https://matthewharcourtijc-oss.github.io/rooks-field-companion/">Open Field Companion ↗</a></div>
+  </div>
+  <div class="hero-art"><img src="assets/harcom-viking-emblem.svg" alt="HARCOM Industries Viking emblem: horned steel helmet, glowing orange eyes and a flame-orange beard"><span class="hero-caption">Forged for function · Built to endure</span></div>
 </div></section>
-<section><div class="wrap"><div class="eyebrow">How we operate</div><h2>Reliability is the product</h2><p class="intro">The Rook Engineering Protocol guides how work moves from idea to release.</p><div class="rules"><div class="rule"><b>01 · CONTROL</b><h3>Human authority</h3><p>Viking retains final approval. AI agents operate within explicit permissions and cannot grant themselves authority.</p></div><div class="rule"><b>02 · PROTECT</b><h3>Security by design</h3><p>Least privilege, separate development and production identities, recoverable backups and auditable changes.</p></div><div class="rule"><b>03 · VERIFY</b><h3>Evidence before claims</h3><p>Independent checks and honest reporting. A successful automated check is not the same as a real-device test or a security audit.</p></div></div></div></section>
-<section class="alt" id="about"><div class="wrap"><div class="eyebrow">Who builds it</div><h2>About HARCOM</h2><p class="intro">An independent technology outfit building useful products with a straightforward belief: reliability first, security always, and human authority throughout.</p><div class="about"><div class="person"><h3>Viking</h3><p>Founder · CEO · Final authority</p></div><div class="person"><h3>Rook</h3><p>Engineering partner · Chief implementer</p></div></div></div></section>
-<section><div class="wrap"><h2>Contact &amp; source</h2><p class="intro">Explore the public project history and source code. Private projects and internal operational details are intentionally not linked here.</p><a class="btn" href="https://github.com/matthewharcourtijc-oss">HARCOM on GitHub ↗</a></div></section>
+<div class="signal" id="principles"><div class="wrap signal-grid">
+  <div class="signal-item"><strong>Human-led</strong><span>People approve consequential changes</span></div>
+  <div class="signal-item"><strong>Security-minded</strong><span>Least privilege and careful review</span></div>
+  <div class="signal-item"><strong>Offline-first</strong><span>Local operation where it matters</span></div>
+  <div class="signal-item"><strong>Evidence-led</strong><span>Claims match what is verified</span></div>
+</div></div>
+<section class="alt" id="portfolio"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">The workbench</div><h2>HARCOM portfolio</h2><p class="intro">Products, engineering systems and research programmes. Live releases are separated from development, private work and future ideas. No project is described as finished when it is not.</p></div><span class="portfolio-kicker">Independent builds · 2026</span></div>
+  <div class="grid">
+    <article class="card"><div class="card-top"><span class="number">01 / FIELD</span><span class="tag live">Live · v0.9.9</span></div><h3>Rook’s Field Companion</h3><p>An offline-first field companion with tasks, notes, mission logs, UK countryside reference material and local backups. The public release is v0.9.9. Browser data is stored locally and is not encrypted; backups and recovery improvements remain central to ongoing engineering.</p><a href="https://matthewharcourtijc-oss.github.io/rooks-field-companion/">Open live app</a></article>
+    <article class="card"><div class="card-top"><span class="number">02 / SECURITY</span><span class="tag build">Android · v0.7.4</span></div><h3>HARCOM Vault</h3><p>Private native Android encrypted storage using Android Keystore integration and recovery archives. The repository contains development source, not a finished public release. Build verification, physical-device validation, signed release work and independent security review remain outstanding. No certification is claimed.</p><span class="no-link">Private development</span></article>
+    <article class="card"><div class="card-top"><span class="number">03 / RECOVERY</span><span class="tag build">Source recovery</span></div><h3>Paradox Vault</h3><p>A separate vault programme. Its original source archive has not yet been recovered into the repository, so the project is not currently buildable and no installable application exists. Source recovery and integrity review come before implementation.</p><span class="no-link">Recovery required</span></article>
+    <article class="card"><div class="card-top"><span class="number">04 / INTELLIGENCE</span><span class="tag build">Engine frozen</span></div><h3>Viking AI Council</h3><p>A multi-perspective AI council with distinct Optimist, Sceptic and Pragmatist voices, a Chair, REAL/FALLBACK health reporting and human approval. The v1 foundation and later chair-analysis work are preserved. The engine remains parked while run repeatability and fallback behaviour are reviewed; human approval remains the final gate.</p><span class="no-link">Review pending</span></article>
+    <article class="card"><div class="card-top"><span class="number">05 / OVERSIGHT</span><span class="tag private">Private · draft</span></div><h3>HARCOM Engineering Control Centre</h3><p>A private engineering oversight dashboard for approved HARCOM projects. Its direction is governed automation: read-only monitoring, competing analysis, approval requests, controlled actions and independent evidence. It is not a public service; production changes and releases remain under Viking’s authority.</p><span class="no-link">Internal engineering</span></article>
+    <article class="card"><div class="card-top"><span class="number">06 / PLATFORM</span><span class="tag build">Architecture</span></div><h3>Rook Forge</h3><p>The foundation for Rook Standalone 2.0, an independent Android companion targeting the Samsung Galaxy S22. The design priorities are offline-first operation, local user-controlled memory, voice and clear permission boundaries. It remains in discovery and architecture; no finished app or APK is claimed.</p><span class="no-link">Discovery &amp; architecture</span></article>
+    <article class="card"><div class="card-top"><span class="number">07 / WORKFLOW</span><span class="tag">In design</span></div><h3>Void Writers</h3><p>A proposed four-agent engineering workflow: Architect, Writer, Checker and Fixer. The model centres on separate responsibilities, restricted tools, independent checking and human-controlled releases. It remains a design programme.</p><span class="no-link">Design programme</span></article>
+    <article class="card"><div class="card-top"><span class="number">08 / OFFLINE AI</span><span class="tag future">Future</span></div><h3>OFFGRID</h3><p>A longer-term offline Rook companion concept exploring local AI, speech, persistent memory and optional connected operation. Planned as a future programme after the current foundations are stable; not yet in active build.</p><span class="no-link">Future programme</span></article>
+    <article class="card"><div class="card-top"><span class="number">09 / RESEARCH</span><span class="tag future">Long-term R&amp;D</span></div><h3>Project Zeus</h3><p>HARCOM’s long-range research ambition for an original AI model, including architecture, training, evaluation and inference. This is a research goal, not an existing trained model.</p><span class="no-link">Research ambition</span></article>
+  </div>
+  <div class="note"><strong>Our status promise:</strong> “Live” means there is a usable release. “Development” means work is in progress and may not be ready for general use. “Private” means internal work, not a public product. “Future” means an idea or programme that has not started building.</div>
+</div></section>
+<section><div class="wrap"><div class="eyebrow">How we operate</div><h2>Reliability is the product</h2><p class="intro">The Rook Engineering Protocol guides how work moves from idea to release. The standard is simple: protect what works, prove what changes and keep the human in command.</p>
+  <div class="rules">
+    <div class="rule"><b>01 · CONTROL</b><h3>Human authority</h3><p>Viking retains final approval. AI agents operate within explicit permissions and cannot grant themselves authority.</p></div>
+    <div class="rule"><b>02 · PROTECT</b><h3>Security by design</h3><p>Least privilege, separate development and production identities, recoverable backups and auditable changes.</p></div>
+    <div class="rule"><b>03 · VERIFY</b><h3>Evidence before claims</h3><p>Independent checks and honest reporting. An automated check is not the same as a real-device test or a security audit.</p></div>
+  </div>
+</div></section>
+<section class="alt" id="about"><div class="wrap"><div class="eyebrow">Who builds it</div><h2>About HARCOM</h2><p class="intro">An independent technology outfit building useful products with a straightforward belief: reliability first, security always, and human authority throughout.</p>
+  <div class="about"><div class="person"><h3>Viking</h3><p>Founder · CEO · Final authority</p></div><div class="person"><h3>Rook</h3><p>Engineering partner · Chief implementer</p></div></div>
+</div></section>
+<section><div class="wrap"><div class="contact-band"><div><div class="eyebrow">Open source · Public work</div><h2>Built in the open.<br>Governed with care.</h2><p>Explore public project history and source code. Private projects and internal operational details are intentionally not linked here.</p></div><a class="btn" href="https://github.com/matthewharcourtijc-oss">HARCOM on GitHub ↗</a></div></div></section>
 <section class="alt"><div class="wrap"><h2>Privacy</h2><p class="intro">This static website does not intentionally use cookies, advertising, analytics or third-party hosted fonts. It uses local system fonts. Links to GitHub are subject to GitHub’s own privacy practices. Field Companion data is stored locally in the user’s browser and is not encrypted.</p><p class="intro">© 2026 HARCOM Industries. All rights reserved.</p></div></section>
-</main><footer><div class="wrap"><span>HARCOM Industries · United Kingdom</span><span>Human authority · Security by design · Evidence before claims</span></div></footer>
-</body></html>
+</main>
+<footer><div class="wrap foot"><strong>HARCOM INDUSTRIES</strong><span>United Kingdom · Human authority · Security by design · Evidence before claims</span></div></footer>
+</body>
+</html>
